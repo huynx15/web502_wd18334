@@ -1,0 +1,19 @@
+{
+    "students": [
+        {
+            "id": "PH123456",
+            "name": "Nguyễn Văn A",
+            "score": 10
+        },
+        {
+            "id": "PH654321",
+            "name": "Nguyễn Văn B",
+            "score": 9
+        },
+        {
+            "id": "PH126789",
+            "name": "Nguyễn Văn C",
+            "score": 8
+        }
+    ]
+}
