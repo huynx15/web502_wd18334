@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Student } from "./ListStudents";
+import { Student } from "../../interfaces/Student";
 const StudentDetail: React.FC = () => {
     const { id } = useParams();
-    const [student, setStudent] = useState<Student>();
+    const [student, setStudent] = useState<Student>({});
     useEffect(() => {
         const getStudent = async () => {
             try {
@@ -19,9 +19,9 @@ const StudentDetail: React.FC = () => {
     return (
         <div>
             <h2>Thông tin sinh viên</h2>
-            <h3>Họ và tên: {student?.name}</h3>
-            <p>ID: {student?.id}</p>
-            <p>Name: {student?.name}</p>
+            <h3>Họ và tên: {student.name}</h3>
+            <p>ID: {student.id}</p>
+            <p>Name: {student.name}</p>
         </div>
     );
 }

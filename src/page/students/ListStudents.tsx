@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-export interface Student {
-    id: string;
-    name: string;
-    score: number;
-}
+import { Student } from "../../interfaces/Student";
+import Button from "../../components/Button";
 const ListStudents: React.FC = () => {
     const [student, setStudent] = useState<Student[]>([]);
     useEffect(() => {
@@ -19,7 +16,21 @@ const ListStudents: React.FC = () => {
             }
         }
         getStudent();
-    }, []);
+    }, [student]);
+    const handleDeleteStudent = (id: string) => {
+        // console.log(id);
+        const deleteStudent = async () => {
+            try {
+                const res = await fetch(`http://localhost:3001/students/${id}`, { method: "DELETE" });
+                // const data = await res.json();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        if (window.confirm('Bạn có muốn xóa không?')) {
+            deleteStudent();
+        }
+    }
     return (
         <table border={1}>
             <thead>
@@ -36,7 +47,10 @@ const ListStudents: React.FC = () => {
                         <td>{st.id}</td>
                         <td><Link to={`/student/${st.id}`}>{st.name}</Link></td>
                         <td>{st.score}</td>
-                        <td><button>Sửa</button> | <button>Xóa</button></td>
+                        <td>
+                            <Link to={`/update-student/${st.id}`}>Sửa</Link> |
+                            <Button title="Xóa" onClick={() => handleDeleteStudent(`${st.id}`)} />
+                        </td>
                     </tr>
                 ))}
             </tbody>

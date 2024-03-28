@@ -6,6 +6,7 @@ const Header: React.FC = () => {
         <ul>
             <li><Link to="/">Trang chủ</Link></li>
             <li><Link to="/students">Danh sách sinh viên</Link></li>
+            <li><Link to="/add-student">Thêm sinh viên</Link></li>
         </ul>
     );
 }
