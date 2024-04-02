@@ -15,5 +15,14 @@
       "name": "Nguyễn Văn D",
       "score": "6"
     }
+  ],
+  "users": [
+    {
+      "id": "a45e",
+      "username": "huynx15",
+      "fullname": "Nguyễn Xuân Huy",
+      "email": "huynx15@fpt.edu.vn",
+      "password": "121212"
+    }
   ]
 }

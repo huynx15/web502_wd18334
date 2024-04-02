@@ -45,3 +45,15 @@ h1 {
 table {
   margin: 0 auto;
 }
+
+ul {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  margin: 0 15px;
+}

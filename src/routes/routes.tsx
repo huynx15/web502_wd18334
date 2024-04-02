@@ -5,6 +5,8 @@ import ListStudents from "../page/students/ListStudents";
 import StudentDetail from "../page/students/StudentDetail";
 import AddStudent from "../page/students/AddStudent";
 import UpdateStudent from "../page/students/UpdateStudent";
+import Register from "../page/auth/Register";
+import Login from "../page/auth/Login";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -15,6 +17,8 @@ export const routes = createBrowserRouter([
             { path: '/student/:id', element: <StudentDetail /> },
             { path: '/add-student', element: <AddStudent /> },
             { path: '/update-student/:id', element: <UpdateStudent /> },
+            { path: '/register', element: <Register /> },
+            { path: '/login', element: <Login /> },
         ]
     }
 ]);
